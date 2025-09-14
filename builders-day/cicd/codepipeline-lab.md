@@ -142,7 +142,7 @@ sudo ./install auto
 
 **Source:**
 - **Source provider**: GitHub
-- **Repository**: Connect using OAuth (follow prompts to authorize)
+- **Repository**: Connect using GitHub App (follow prompts to authorize)
 - **GitHub repository**: Select your forked `ccp` repository
 - **Source version**: `main`
 
