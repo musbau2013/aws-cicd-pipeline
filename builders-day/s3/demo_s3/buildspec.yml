@@ -7,13 +7,23 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      python: 3.11
     commands:
-      - echo "Installing AWS CLI..."
+      # Step 1: Update packages and install the OpenSSL development library
       - sudo yum update -y
       - sudo yum install -y openssl-devel
-      - pip install --upgrade awscli
+
+      # Step 2: Now that the dependencies are met, run the pyenv command
+      - pyenv install 3.11.13
+      - rm -rf /tmp/*
+      
+  # install:
+  #   runtime-versions:
+  #     python: 3.11
+  #   commands:
+  #     - echo "Installing AWS CLI..."
+  #     - sudo yum update -y
+  #     - sudo yum install -y openssl-devel
+  #     - pip install --upgrade awscli
 
   # install:
   #   commands:
