@@ -131,6 +131,8 @@ sudo ./install auto
 
 ## Part 3: Create CodeBuild Project
 
+Before creating the CodeBuild project, create a Github Connection from Developer Tools -> Connections to make it the other steps simpler
+
 ### Step 1: Navigate to CodeBuild
 1. **Navigate** to CodeBuild service
 2. **Click** "Create build project"
