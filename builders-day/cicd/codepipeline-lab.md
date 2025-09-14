@@ -67,7 +67,6 @@ We'll build a pipeline with:
 2. **Select** "AWS service" → "EC2"
 3. **Click "Next"** → **Attach policies**:
    - Search and select `AmazonEC2RoleforAWSCodeDeploy`
-   - Search and select `CloudWatchAgentServerPolicy`
 4. **Role name**: `EC2CodeDeployRole`
 5. **Click "Create role"**
 
@@ -77,7 +76,7 @@ We'll build a pipeline with:
    - **Name**: `WebServer-CodeDeploy`
    - **AMI**: Amazon Linux 2023 AMI
    - **Instance type**: t2.micro (Free Tier)
-   - **Key pair**: Create new or use existing
+   - **Key pair**: Continue without a keypair
    - **Security group**: Create new with HTTP (80) and SSH (22) access
    - **IAM instance profile**: Select `EC2CodeDeployRole`
 
