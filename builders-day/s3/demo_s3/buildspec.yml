@@ -6,22 +6,24 @@ version: 0.2
 # - CLOUDFRONT_DISTRIBUTION_ID: CloudFront distribution ID (optional)
 
 phases:
-  # install:
-  #   runtime-versions:
-  #     python: 3.11
-  #   commands:
-  #     - echo "Installing AWS CLI..."
-  #     - pip install --upgrade awscli
-
   install:
+    runtime-versions:
+      python: 3.11
     commands:
-      # Step 1: Update packages and install OpenSSL development library
+      - echo "Installing AWS CLI..."
       - sudo yum update -y
       - sudo yum install -y openssl-devel
+      - pip install --upgrade awscli
 
-      # Step 2: Now that dependencies are met, run the pyenv command
-      - pyenv install 3.11.13
-      - rm -rf /tmp/*
+  # install:
+  #   commands:
+  #     # Step 1: Update packages and install OpenSSL development library
+  #     - sudo yum update -y
+  #     - sudo yum install -y openssl-devel
+
+  #     # Step 2: Now that dependencies are met, run the pyenv command
+  #     - pyenv install 3.11.13
+  #     - rm -rf /tmp/*
       
   pre_build:
     commands:
