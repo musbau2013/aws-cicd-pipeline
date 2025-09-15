@@ -7,27 +7,10 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      python: 3.11
     commands:
-      - sudo yum update -y
-      - sudo yum groupinstall -y "Development Tools"
-      - sudo yum install -y \
-          gcc make \
-          patch \
-          libffi-devel \
-          bzip2 bzip2-devel \
-          zlib zlib-devel \
-          xz xz-devel \
-          wget curl \
-          sqlite sqlite-devel \
-          readline readline-devel \
-          tk tk-devel \
-          gdbm gdbm-devel \
-          ncurses ncurses-devel \
-          openssl-devel \
-          libuuid-devel
-      - export PYTHON_CONFIGURE_OPTS="--enable-shared"
-      - pyenv install 3.11.13
-      - pyenv global 3.11.13
+      - echo "Using CodeBuild’s managed Python 3.11"
       - python --version
       - pip --version
       
