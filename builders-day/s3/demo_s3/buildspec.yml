@@ -6,11 +6,11 @@ version: 0.2
 # - CLOUDFRONT_DISTRIBUTION_ID: CloudFront distribution ID (optional)
 
 phases:
-install:
-  runtime-versions:
-    python: 3.11
-  commands:
-    - pip install --upgrade pip setuptools awscli
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - pip install --upgrade pip setuptools awscli
 
       
   pre_build:
