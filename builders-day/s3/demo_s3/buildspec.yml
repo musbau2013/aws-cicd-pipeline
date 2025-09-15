@@ -12,6 +12,7 @@ phases:
       - sudo yum groupinstall -y "Development Tools"
       - sudo yum install -y \
           gcc make \
+          patch \
           libffi-devel \
           bzip2 bzip2-devel \
           zlib zlib-devel \
@@ -22,9 +23,13 @@ phases:
           tk tk-devel \
           gdbm gdbm-devel \
           ncurses ncurses-devel \
-          openssl-devel
+          openssl-devel \
+          libuuid-devel
+      - export PYTHON_CONFIGURE_OPTS="--enable-shared"
       - pyenv install 3.11.13
-      - rm -rf /tmp/*
+      - pyenv global 3.11.13
+      - python --version
+      - pip --version
       
 
       
